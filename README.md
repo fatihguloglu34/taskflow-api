@@ -1,8 +1,10 @@
 # TaskFlow API
 
+[![CI](https://github.com/fatihguloglu34/taskflow-api/actions/workflows/ci.yml/badge.svg)](https://github.com/fatihguloglu34/taskflow-api/actions/workflows/ci.yml)
+
 Takımlar için görev yönetimi REST API'si. Kullanıcılar proje oluşturup ekip arkadaşlarını davet edebiliyor, görevleri atayıp takip edebiliyor ve görevler üzerine yorum yazabiliyor. Trello / Jira mantığının sadeleştirilmiş bir backend'i.
 
-**Kullanılan teknolojiler:** Python, FastAPI, SQLAlchemy 2.0, PostgreSQL / SQLite, Pydantic v2, JWT, Pytest, Docker
+**Kullanılan teknolojiler:** Python, FastAPI, SQLAlchemy 2.0, PostgreSQL / SQLite, Pydantic v2, JWT, Pytest, Docker, GitHub Actions
 
 ## Özellikler
 
@@ -14,7 +16,7 @@ Takımlar için görev yönetimi REST API'si. Kullanıcılar proje oluşturup ek
 - **Sıralama & sayfalama:** `sort_by`, `order`, `limit`, `offset`
 - **İstatistikler:** Proje bazında durum/öncelik dağılımı, geciken görev sayısı, tamamlanma oranı
 - **Yorumlar:** Görevlere yorum ekleme/silme
-- **Testler:** 22 entegrasyon testi (pytest)
+- **Testler:** 22 entegrasyon testi, her push'ta GitHub Actions üzerinde çalışıyor
 
 ## Yetki Tablosu
 
