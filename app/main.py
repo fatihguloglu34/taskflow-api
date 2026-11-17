@@ -6,7 +6,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
 from app import models  # noqa: F401  (tabloların metadata'ya kaydı için)
-from app.api.routes import auth, users
+from app.api.routes import auth, projects, users
 from app.core.config import settings
 from app.db import Base, engine
 
@@ -56,5 +56,5 @@ def health() -> dict:
     return {"status": "ok"}
 
 
-for router in (auth.router, users.router):
+for router in (auth.router, users.router, projects.router):
     app.include_router(router, prefix=settings.API_V1_PREFIX)
